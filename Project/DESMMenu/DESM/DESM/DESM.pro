@@ -28,17 +28,23 @@ SOURCES += \
         main.cpp \
         loginScreen.cpp \
     mainscreen.cpp \
-    loadProfile.cpp
+    loadProfile.cpp \
+    createProfile.cpp \
+    editProfile.cpp
 
 HEADERS += \
         loginScreen.h \
     mainscreen.h \
-    loadProfile.h
+    loadProfile.h \
+    createProfile.h \
+    editProfile.h
 
 FORMS += \
         loginScreen.ui \
     mainscreen.ui \
-    loadProfile.ui
+    loadProfile.ui \
+    createProfile.ui \
+    editProfile.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

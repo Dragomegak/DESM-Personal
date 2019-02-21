@@ -3,6 +3,8 @@
 
 #include <QDialog>
 #include "loadProfile.h"
+#include "createProfile.h"
+#include "editProfile.h"
 
 namespace Ui {
 class MainScreen;
@@ -26,6 +28,8 @@ private slots:
 private:
     Ui::MainScreen *ui;
     LoadProfile *loadProfile;
+    CreateProfile *createProfile;
+    EditProfile *editProfile;
 };
 
 #endif // MAINSCREEN_H

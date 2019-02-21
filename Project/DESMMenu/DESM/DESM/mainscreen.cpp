@@ -16,7 +16,9 @@ MainScreen::~MainScreen()
 
 void MainScreen::on_createProfileButton_clicked()
 {
-
+    this->hide(); //hides the login screen when sign in button is clicked
+    createProfile = new CreateProfile(this);
+    createProfile->show();
 }
 
 void MainScreen::on_switchUserButton_clicked()

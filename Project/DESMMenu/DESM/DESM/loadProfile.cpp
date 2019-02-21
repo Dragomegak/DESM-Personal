@@ -20,3 +20,10 @@ void LoadProfile::on_backButton_clicked()
     QWidget *parent = this->parentWidget();
     parent->show();
 }
+
+void LoadProfile::on_editProfileButton_clicked()
+{
+    this->hide(); //hides the login screen when sign in button is clicked
+    editProfile = new EditProfile(this); //destructor for this culmination of windows
+    editProfile->show(); //shows mainScreen.ui
+}

@@ -24,18 +24,19 @@ class Ui_LoadProfile
 {
 public:
     QListView *applicationListView;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QHBoxLayout *horizontalLayout;
     QLabel *currentUserLabel;
     QLabel *showUsernameLabel;
-    QWidget *widget1;
+    QWidget *layoutWidget1;
     QHBoxLayout *horizontalLayout_2;
     QLabel *currentProfileLabel;
     QLabel *showCurrentProfileLabel;
-    QWidget *widget2;
+    QWidget *layoutWidget2;
     QHBoxLayout *horizontalLayout_3;
-    QPushButton *addProgramButton;
-    QPushButton *deleteProgramButton;
+    QPushButton *editProfileButton;
+    QPushButton *loadInBackgroundButton;
+    QPushButton *loadProfile;
     QPushButton *backButton;
 
     void setupUi(QDialog *LoadProfile)
@@ -46,55 +47,60 @@ public:
         applicationListView = new QListView(LoadProfile);
         applicationListView->setObjectName(QString::fromUtf8("applicationListView"));
         applicationListView->setGeometry(QRect(70, 60, 256, 192));
-        widget = new QWidget(LoadProfile);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(208, 10, 153, 15));
-        horizontalLayout = new QHBoxLayout(widget);
+        layoutWidget = new QWidget(LoadProfile);
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
+        layoutWidget->setGeometry(QRect(208, 10, 153, 15));
+        horizontalLayout = new QHBoxLayout(layoutWidget);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        currentUserLabel = new QLabel(widget);
+        currentUserLabel = new QLabel(layoutWidget);
         currentUserLabel->setObjectName(QString::fromUtf8("currentUserLabel"));
 
         horizontalLayout->addWidget(currentUserLabel);
 
-        showUsernameLabel = new QLabel(widget);
+        showUsernameLabel = new QLabel(layoutWidget);
         showUsernameLabel->setObjectName(QString::fromUtf8("showUsernameLabel"));
 
         horizontalLayout->addWidget(showUsernameLabel);
 
-        widget1 = new QWidget(LoadProfile);
-        widget1->setObjectName(QString::fromUtf8("widget1"));
-        widget1->setGeometry(QRect(68, 40, 161, 15));
-        horizontalLayout_2 = new QHBoxLayout(widget1);
+        layoutWidget1 = new QWidget(LoadProfile);
+        layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
+        layoutWidget1->setGeometry(QRect(68, 40, 161, 15));
+        horizontalLayout_2 = new QHBoxLayout(layoutWidget1);
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
-        currentProfileLabel = new QLabel(widget1);
+        currentProfileLabel = new QLabel(layoutWidget1);
         currentProfileLabel->setObjectName(QString::fromUtf8("currentProfileLabel"));
 
         horizontalLayout_2->addWidget(currentProfileLabel);
 
-        showCurrentProfileLabel = new QLabel(widget1);
+        showCurrentProfileLabel = new QLabel(layoutWidget1);
         showCurrentProfileLabel->setObjectName(QString::fromUtf8("showCurrentProfileLabel"));
 
         horizontalLayout_2->addWidget(showCurrentProfileLabel);
 
-        widget2 = new QWidget(LoadProfile);
-        widget2->setObjectName(QString::fromUtf8("widget2"));
-        widget2->setGeometry(QRect(70, 260, 246, 25));
-        horizontalLayout_3 = new QHBoxLayout(widget2);
+        layoutWidget2 = new QWidget(LoadProfile);
+        layoutWidget2->setObjectName(QString::fromUtf8("layoutWidget2"));
+        layoutWidget2->setGeometry(QRect(50, 260, 327, 25));
+        horizontalLayout_3 = new QHBoxLayout(layoutWidget2);
         horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
         horizontalLayout_3->setContentsMargins(0, 0, 0, 0);
-        addProgramButton = new QPushButton(widget2);
-        addProgramButton->setObjectName(QString::fromUtf8("addProgramButton"));
+        editProfileButton = new QPushButton(layoutWidget2);
+        editProfileButton->setObjectName(QString::fromUtf8("editProfileButton"));
 
-        horizontalLayout_3->addWidget(addProgramButton);
+        horizontalLayout_3->addWidget(editProfileButton);
 
-        deleteProgramButton = new QPushButton(widget2);
-        deleteProgramButton->setObjectName(QString::fromUtf8("deleteProgramButton"));
+        loadInBackgroundButton = new QPushButton(layoutWidget2);
+        loadInBackgroundButton->setObjectName(QString::fromUtf8("loadInBackgroundButton"));
 
-        horizontalLayout_3->addWidget(deleteProgramButton);
+        horizontalLayout_3->addWidget(loadInBackgroundButton);
 
-        backButton = new QPushButton(widget2);
+        loadProfile = new QPushButton(layoutWidget2);
+        loadProfile->setObjectName(QString::fromUtf8("loadProfile"));
+
+        horizontalLayout_3->addWidget(loadProfile);
+
+        backButton = new QPushButton(layoutWidget2);
         backButton->setObjectName(QString::fromUtf8("backButton"));
 
         horizontalLayout_3->addWidget(backButton);
@@ -112,8 +118,9 @@ public:
         showUsernameLabel->setText(QApplication::translate("LoadProfile", "not implemented", nullptr));
         currentProfileLabel->setText(QApplication::translate("LoadProfile", "Current Profile:", nullptr));
         showCurrentProfileLabel->setText(QApplication::translate("LoadProfile", "not implemented", nullptr));
-        addProgramButton->setText(QApplication::translate("LoadProfile", "Add Program", nullptr));
-        deleteProgramButton->setText(QApplication::translate("LoadProfile", "Delete Program", nullptr));
+        editProfileButton->setText(QApplication::translate("LoadProfile", "Edit Profile", nullptr));
+        loadInBackgroundButton->setText(QApplication::translate("LoadProfile", "Load in BG", nullptr));
+        loadProfile->setText(QApplication::translate("LoadProfile", "Load Profile", nullptr));
         backButton->setText(QApplication::translate("LoadProfile", "Back", nullptr));
     } // retranslateUi
 

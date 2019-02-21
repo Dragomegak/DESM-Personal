@@ -2,6 +2,7 @@
 #define LOADPROFILE_H
 
 #include <QDialog>
+#include "editProfile.h"
 
 namespace Ui {
 class LoadProfile;
@@ -18,8 +19,11 @@ public:
 private slots:
     void on_backButton_clicked();
 
+    void on_editProfileButton_clicked();
+
 private:
     Ui::LoadProfile *ui;
+    EditProfile *editProfile;
 };
 
 #endif // LOADPROFILE_H
