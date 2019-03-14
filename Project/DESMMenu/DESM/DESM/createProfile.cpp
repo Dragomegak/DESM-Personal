@@ -2,6 +2,8 @@
 #include "ui_createProfile.h"
 #include <QFileDialog>
 #include <QMessageBox>
+#include <QDesktopServices>
+#include <QUrl>
 
 CreateProfile::CreateProfile(QWidget *parent) :
     QDialog(parent),
@@ -31,5 +33,6 @@ void CreateProfile::on_addProgram_clicked()
                 "C:\\Program Files (x86)",
                 "All Files (*.*);; Exe Files (*.exe)"
                 );
-    QMessageBox::information(this, tr("File Name"), filename);
+    QDesktopServices::openUrl(QUrl("file:///"+filename, QUrl::TolerantMode));
+    //QMessageBox::information(this, tr("File Name"), filename);
 }
