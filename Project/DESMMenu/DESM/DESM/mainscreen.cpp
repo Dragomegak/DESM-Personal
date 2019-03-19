@@ -1,12 +1,17 @@
 #include "mainscreen.h"
 #include "ui_mainscreen.h"
+#include <QDir>
 
 MainScreen::MainScreen(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::MainScreen)
 {
     ui->setupUi(this);
-
+    QDir directory(".");
+    QStringList files = directory.entryList(QStringList() << "*.txt" << "*.TXT",QDir::Files);
+    foreach(QString filename, files){
+        ui->comboBox->addItem(filename);
+    }
 }
 
 MainScreen::~MainScreen()
