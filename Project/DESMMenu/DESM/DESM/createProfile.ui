@@ -52,7 +52,7 @@
      <x>50</x>
      <y>40</y>
      <width>221</width>
-     <height>22</height>
+     <height>25</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -64,7 +64,11 @@
      </widget>
     </item>
     <item>
-     <widget class="QLineEdit" name="profileNameLineEdit"/>
+     <widget class="QPushButton" name="pushButton">
+      <property name="text">
+       <string>Set Profile Name</string>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>

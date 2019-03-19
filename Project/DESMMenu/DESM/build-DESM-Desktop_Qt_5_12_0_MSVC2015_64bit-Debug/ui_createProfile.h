@@ -14,7 +14,6 @@
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
-#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QListWidget>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QWidget>
@@ -32,7 +31,7 @@ public:
     QWidget *layoutWidget_2;
     QHBoxLayout *horizontalLayout_2;
     QLabel *profileNameLabel;
-    QLineEdit *profileNameLineEdit;
+    QPushButton *pushButton;
     QWidget *layoutWidget;
     QHBoxLayout *horizontalLayout;
     QLabel *currentUserLabel;
@@ -67,7 +66,7 @@ public:
 
         layoutWidget_2 = new QWidget(CreateProfile);
         layoutWidget_2->setObjectName(QString::fromUtf8("layoutWidget_2"));
-        layoutWidget_2->setGeometry(QRect(50, 40, 221, 22));
+        layoutWidget_2->setGeometry(QRect(50, 40, 221, 25));
         horizontalLayout_2 = new QHBoxLayout(layoutWidget_2);
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
@@ -76,10 +75,10 @@ public:
 
         horizontalLayout_2->addWidget(profileNameLabel);
 
-        profileNameLineEdit = new QLineEdit(layoutWidget_2);
-        profileNameLineEdit->setObjectName(QString::fromUtf8("profileNameLineEdit"));
+        pushButton = new QPushButton(layoutWidget_2);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
 
-        horizontalLayout_2->addWidget(profileNameLineEdit);
+        horizontalLayout_2->addWidget(pushButton);
 
         layoutWidget = new QWidget(CreateProfile);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
@@ -113,6 +112,7 @@ public:
         deleteProgram->setText(QApplication::translate("CreateProfile", "Delete Last Progam", nullptr));
         backButton->setText(QApplication::translate("CreateProfile", "Back", nullptr));
         profileNameLabel->setText(QApplication::translate("CreateProfile", "Set Profile Name:", nullptr));
+        pushButton->setText(QApplication::translate("CreateProfile", "Set Profile Name", nullptr));
         currentUserLabel->setText(QApplication::translate("CreateProfile", "Current User:", nullptr));
         showUsernameLabel->setText(QApplication::translate("CreateProfile", "not implemented", nullptr));
     } // retranslateUi

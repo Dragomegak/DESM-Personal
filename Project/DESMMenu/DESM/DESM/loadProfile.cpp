@@ -12,6 +12,7 @@ LoadProfile::LoadProfile(QWidget *parent) :
     ui(new Ui::LoadProfile)
 {
     ui->setupUi(this);
+
 }
 
 LoadProfile::~LoadProfile()
