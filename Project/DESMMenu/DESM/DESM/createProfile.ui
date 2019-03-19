@@ -64,11 +64,7 @@
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton">
-      <property name="text">
-       <string>Set Profile Name</string>
-      </property>
-     </widget>
+     <widget class="QLineEdit" name="lineEdit"/>
     </item>
    </layout>
   </widget>

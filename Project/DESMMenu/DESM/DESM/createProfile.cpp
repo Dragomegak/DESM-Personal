@@ -48,7 +48,8 @@ void CreateProfile::on_addProgram_clicked()
                 "C:\\Program Files (x86)",
                 "All Files (*.*);; Exe Files (*.exe)"
                 );
-    QString profile = "profile.txt";
+    QString profilename = ui->lineEdit->text() + ".txt";
+    QString profile = profilename;
 
     QFile file(profile);
     if (file.open(QIODevice::ReadWrite | QIODevice::Text | QIODevice::Append)){
