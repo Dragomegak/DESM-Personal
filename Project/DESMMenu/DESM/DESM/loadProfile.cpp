@@ -6,13 +6,18 @@
 #include <QUrl>
 #include <QMessageBox>
 #include <QProcess>
+#include <QDir>
 
 LoadProfile::LoadProfile(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::LoadProfile)
 {
     ui->setupUi(this);
-
+    QDir directory(".");
+    QStringList files = directory.entryList(QStringList() << "*.txt" << "*.TXT",QDir::Files);
+    foreach(QString filename, files) {
+            ui->listWidget->addItem(filename);
+    }
 }
 
 LoadProfile::~LoadProfile()

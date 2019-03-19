@@ -14,16 +14,11 @@ CreateProfile::CreateProfile(QWidget *parent) :
     ui(new Ui::CreateProfile)
 {
     ui->setupUi(this);
-    //Prereq to loading list
-    QFile file("profile.txt");
-    //check file, if it exists continue
-    if (file.open(QIODevice::ReadOnly | QIODevice::Text)){
-        QTextStream stream(&file);
-        while (!stream.atEnd()){
-            QString line = stream.readLine();
-            ui->listWidget->addItem(line);
-            //plans: store lines in a vector or array
-        }
+    //assume the directory exists and contains some files and you want all jpg and JPG files
+    QDir directory(".");
+    QStringList files = directory.entryList(QStringList() << "*.txt" << "*.TXT",QDir::Files);
+    foreach(QString filename, files) {
+            ui->listWidget->addItem(filename);
     }
 }
 
