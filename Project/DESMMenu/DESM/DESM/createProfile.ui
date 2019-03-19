@@ -33,7 +33,7 @@
     <item>
      <widget class="QPushButton" name="deleteProgram">
       <property name="text">
-       <string>Delete Program</string>
+       <string>Delete Last Progam</string>
       </property>
      </widget>
     </item>
@@ -68,16 +68,6 @@
     </item>
    </layout>
   </widget>
-  <widget class="QListView" name="applicationListView">
-   <property name="geometry">
-    <rect>
-     <x>52</x>
-     <y>71</y>
-     <width>256</width>
-     <height>181</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
@@ -103,6 +93,16 @@
      </widget>
     </item>
    </layout>
+  </widget>
+  <widget class="QListWidget" name="listWidget">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>60</y>
+     <width>256</width>
+     <height>192</height>
+    </rect>
+   </property>
   </widget>
  </widget>
  <resources/>

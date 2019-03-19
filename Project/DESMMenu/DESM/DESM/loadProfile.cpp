@@ -52,7 +52,4 @@ void LoadProfile::on_loadProfile_clicked()
             messageBox.setFixedSize(100,100);
         }
         file.close();
-        //handles launching of the exe
-        //QDesktopServices::openUrl(QUrl("file:///"+filename, QUrl::TolerantMode));
-        //QMessageBox::information(this, tr("File Name"), filename);
 }

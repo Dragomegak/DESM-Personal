@@ -6,12 +6,25 @@
 #include <QUrl>
 #include <QTextStream>
 #include <QFileInfo>
+#include <QtCore>
+#include <QtGui>
 
 CreateProfile::CreateProfile(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::CreateProfile)
 {
     ui->setupUi(this);
+    //Prereq to loading list
+    QFile file("profile.txt");
+    //check file, if it exists continue
+    if (file.open(QIODevice::ReadOnly | QIODevice::Text)){
+        QTextStream stream(&file);
+        while (!stream.atEnd()){
+            QString line = stream.readLine();
+            ui->listWidget->addItem(line);
+            //plans: store lines in a vector or array
+        }
+    }
 }
 
 CreateProfile::~CreateProfile()
@@ -46,3 +59,4 @@ void CreateProfile::on_addProgram_clicked()
 
 
 }
+

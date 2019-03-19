@@ -15,7 +15,7 @@
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
-#include <QtWidgets/QListView>
+#include <QtWidgets/QListWidget>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QWidget>
 
@@ -33,11 +33,11 @@ public:
     QHBoxLayout *horizontalLayout_2;
     QLabel *profileNameLabel;
     QLineEdit *profileNameLineEdit;
-    QListView *applicationListView;
     QWidget *layoutWidget;
     QHBoxLayout *horizontalLayout;
     QLabel *currentUserLabel;
     QLabel *showUsernameLabel;
+    QListWidget *listWidget;
 
     void setupUi(QDialog *CreateProfile)
     {
@@ -81,9 +81,6 @@ public:
 
         horizontalLayout_2->addWidget(profileNameLineEdit);
 
-        applicationListView = new QListView(CreateProfile);
-        applicationListView->setObjectName(QString::fromUtf8("applicationListView"));
-        applicationListView->setGeometry(QRect(52, 71, 256, 181));
         layoutWidget = new QWidget(CreateProfile);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
         layoutWidget->setGeometry(QRect(190, 10, 153, 15));
@@ -100,6 +97,9 @@ public:
 
         horizontalLayout->addWidget(showUsernameLabel);
 
+        listWidget = new QListWidget(CreateProfile);
+        listWidget->setObjectName(QString::fromUtf8("listWidget"));
+        listWidget->setGeometry(QRect(50, 60, 256, 192));
 
         retranslateUi(CreateProfile);
 
@@ -110,7 +110,7 @@ public:
     {
         CreateProfile->setWindowTitle(QApplication::translate("CreateProfile", "Dialog", nullptr));
         addProgram->setText(QApplication::translate("CreateProfile", "Add Program", nullptr));
-        deleteProgram->setText(QApplication::translate("CreateProfile", "Delete Program", nullptr));
+        deleteProgram->setText(QApplication::translate("CreateProfile", "Delete Last Progam", nullptr));
         backButton->setText(QApplication::translate("CreateProfile", "Back", nullptr));
         profileNameLabel->setText(QApplication::translate("CreateProfile", "Set Profile Name:", nullptr));
         currentUserLabel->setText(QApplication::translate("CreateProfile", "Current User:", nullptr));
