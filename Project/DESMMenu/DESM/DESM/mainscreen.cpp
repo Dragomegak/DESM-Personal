@@ -1,5 +1,6 @@
 #include "mainscreen.h"
 #include "ui_mainscreen.h"
+#include "loginScreen.h"
 #include <QDir>
 
 MainScreen::MainScreen(QWidget *parent) :
@@ -12,6 +13,8 @@ MainScreen::MainScreen(QWidget *parent) :
     foreach(QString filename, files){
         ui->comboBox->addItem(filename);
     }
+    QString username = "username";
+    ui->showUsernameLabel->setText(username);
 }
 
 MainScreen::~MainScreen()

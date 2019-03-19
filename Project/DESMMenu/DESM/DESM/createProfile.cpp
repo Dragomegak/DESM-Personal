@@ -1,5 +1,6 @@
 #include "createProfile.h"
 #include "ui_createProfile.h"
+#include "loginScreen.h"
 #include <QFileDialog>
 #include <QMessageBox>
 #include <QDesktopServices>
@@ -20,6 +21,9 @@ CreateProfile::CreateProfile(QWidget *parent) :
     foreach(QString filename, files) {
             ui->listWidget->addItem(filename);
     }
+
+    QString username = "username";
+    ui->showUsernameLabel->setText(username);
 }
 
 CreateProfile::~CreateProfile()

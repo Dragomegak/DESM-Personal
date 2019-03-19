@@ -20,6 +20,9 @@ EditProfile::EditProfile(QWidget *parent) :
             //plans: store lines in a vector or array
         }
     }
+
+    QString username = "username";
+    ui->showUsernameLabel->setText(username);
 }
 
 EditProfile::~EditProfile()

@@ -1,11 +1,31 @@
 #include "loginScreen.h"
 #include "ui_loginScreen.h"
+#include <QTextEdit>
+
+template <typename T>
+class username: public QDialog{
+    QString usernametext;
+    public:
+    username(){
+        usernametext = "none specified";
+    }
+    username(QString inputusernametext){
+      usernametext = inputusernametext;
+    }
+    ~username(){
+        delete usernametext;
+    }
+    void set(QString inputusernametext){
+        usernametext = inputusernametext;
+    }
+};
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
 }
 
 MainWindow::~MainWindow()
@@ -26,6 +46,7 @@ void MainWindow::on_signInButton_clicked()
     //QMessageBox::information(this, "Username", ui->usernameLineEdit->text());
     //Stores Username
     username = ui->usernameLineEdit->text();
+
     //Shows Password
     //QMessageBox::information(this, "Password", ui->passwordLineEdit->text());
     //Stores Password

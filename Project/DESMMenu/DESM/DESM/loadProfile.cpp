@@ -18,6 +18,9 @@ LoadProfile::LoadProfile(QWidget *parent) :
     foreach(QString filename, files) {
             ui->listWidget->addItem(filename);
     }
+
+    QString username = "username";
+    ui->showUsernameLabel->setText(username);
 }
 
 LoadProfile::~LoadProfile()
@@ -43,7 +46,8 @@ void LoadProfile::on_editProfileButton_clicked()
 
 void LoadProfile::on_loadProfile_clicked()
 {
-        QFile file("profile.txt");
+        const QString& currentprofile = ui->listWidget->currentItem()->text();
+        QFile file(currentprofile);
         //check file, if it exists continue
         if (file.open(QIODevice::ReadOnly | QIODevice::Text)){
             QTextStream stream(&file);
