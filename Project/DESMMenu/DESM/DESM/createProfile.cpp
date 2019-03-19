@@ -35,27 +35,14 @@ void CreateProfile::on_addProgram_clicked()
                 "C:\\Program Files (x86)",
                 "All Files (*.*);; Exe Files (*.exe)"
                 );
+    QString profile = "profile.txt";
 
-    if (QFileInfo("Profile.txt").exists()){
-
-        QFile file("profile.txt");
-        QTextStream outstream(&file);
-        outstream << filename << endl;
+    QFile file(profile);
+    if (file.open(QIODevice::ReadWrite | QIODevice::Text | QIODevice::Append)){
+        QTextStream stream(&file);
+        stream << filename << endl;
         file.close();
     }
-    else{
-        //If not found create it
-        QFile file("profile.txt");
-        if (!file.open(QIODevice::ReadWrite | QIODevice::Text | QIODevice::Append))
-        return;
-
-        //goes to the end, takes the string of filename (presumably path) and appends at the end of file
-        //if (file.atEnd()){
-        //    file.write(filename.toUtf8());
-        //}
-    }
-
-
     //handles launching of the exe
     //QDesktopServices::openUrl(QUrl("file:///"+filename, QUrl::TolerantMode));
     //QMessageBox::information(this, tr("File Name"), filename);

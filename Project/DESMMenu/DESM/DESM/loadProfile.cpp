@@ -26,4 +26,7 @@ void LoadProfile::on_editProfileButton_clicked()
     this->hide(); //hides the login screen when sign in button is clicked
     editProfile = new EditProfile(this); //destructor for this culmination of windows
     editProfile->show(); //shows mainScreen.ui
+    //handles launching of the exe
+    //QDesktopServices::openUrl(QUrl("file:///"+filename, QUrl::TolerantMode));
+    //QMessageBox::information(this, tr("File Name"), filename);
 }
