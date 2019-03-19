@@ -5,6 +5,7 @@
 #include <QDesktopServices>
 #include <QUrl>
 #include <QTextStream>
+#include <QFileInfo>
 
 CreateProfile::CreateProfile(QWidget *parent) :
     QDialog(parent),
@@ -34,21 +35,24 @@ void CreateProfile::on_addProgram_clicked()
                 "C:\\Program Files (x86)",
                 "All Files (*.*);; Exe Files (*.exe)"
                 );
-    //Pseudo - open file, get it ready
-    QFile file("profile.txt");
-    if (!file.open(QIODevice::ReadWrite | QIODevice::Text | QIODevice::Append))
-    return;
 
-    //goes to the end, takes the string of filename (presumably path) and appends at the end of file
-    if (file.atEnd()){
-        file.write(filename.toUtf8());
-    }
-    //check if at end of file
-    else
-        {
+    if (QFileInfo("Profile.txt").exists()){
+
+        QFile file("profile.txt");
         QTextStream outstream(&file);
         outstream << filename << endl;
         file.close();
+    }
+    else{
+        //If not found create it
+        QFile file("profile.txt");
+        if (!file.open(QIODevice::ReadWrite | QIODevice::Text | QIODevice::Append))
+        return;
+
+        //goes to the end, takes the string of filename (presumably path) and appends at the end of file
+        //if (file.atEnd()){
+        //    file.write(filename.toUtf8());
+        //}
     }
 
 
