@@ -15,7 +15,7 @@
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
-#include <QtWidgets/QListView>
+#include <QtWidgets/QListWidget>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QWidget>
 
@@ -32,12 +32,12 @@ public:
     QWidget *layoutWidget_2;
     QHBoxLayout *horizontalLayout_2;
     QLabel *profileNameLabel;
-    QLineEdit *profileNameLineEdit;
-    QListView *applicationListView;
+    QLineEdit *lineEdit;
     QWidget *layoutWidget;
     QHBoxLayout *horizontalLayout;
     QLabel *currentUserLabel;
     QLabel *showUsernameLabel;
+    QListWidget *listWidget;
 
     void setupUi(QDialog *CreateProfile)
     {
@@ -67,7 +67,7 @@ public:
 
         layoutWidget_2 = new QWidget(CreateProfile);
         layoutWidget_2->setObjectName(QString::fromUtf8("layoutWidget_2"));
-        layoutWidget_2->setGeometry(QRect(50, 40, 221, 22));
+        layoutWidget_2->setGeometry(QRect(50, 40, 221, 25));
         horizontalLayout_2 = new QHBoxLayout(layoutWidget_2);
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
@@ -76,14 +76,11 @@ public:
 
         horizontalLayout_2->addWidget(profileNameLabel);
 
-        profileNameLineEdit = new QLineEdit(layoutWidget_2);
-        profileNameLineEdit->setObjectName(QString::fromUtf8("profileNameLineEdit"));
+        lineEdit = new QLineEdit(layoutWidget_2);
+        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
 
-        horizontalLayout_2->addWidget(profileNameLineEdit);
+        horizontalLayout_2->addWidget(lineEdit);
 
-        applicationListView = new QListView(CreateProfile);
-        applicationListView->setObjectName(QString::fromUtf8("applicationListView"));
-        applicationListView->setGeometry(QRect(52, 71, 256, 181));
         layoutWidget = new QWidget(CreateProfile);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
         layoutWidget->setGeometry(QRect(190, 10, 153, 15));
@@ -100,6 +97,9 @@ public:
 
         horizontalLayout->addWidget(showUsernameLabel);
 
+        listWidget = new QListWidget(CreateProfile);
+        listWidget->setObjectName(QString::fromUtf8("listWidget"));
+        listWidget->setGeometry(QRect(50, 60, 256, 192));
 
         retranslateUi(CreateProfile);
 
@@ -110,7 +110,7 @@ public:
     {
         CreateProfile->setWindowTitle(QApplication::translate("CreateProfile", "Dialog", nullptr));
         addProgram->setText(QApplication::translate("CreateProfile", "Add Program", nullptr));
-        deleteProgram->setText(QApplication::translate("CreateProfile", "Delete Program", nullptr));
+        deleteProgram->setText(QApplication::translate("CreateProfile", "Delete Last Progam", nullptr));
         backButton->setText(QApplication::translate("CreateProfile", "Back", nullptr));
         profileNameLabel->setText(QApplication::translate("CreateProfile", "Set Profile Name:", nullptr));
         currentUserLabel->setText(QApplication::translate("CreateProfile", "Current User:", nullptr));

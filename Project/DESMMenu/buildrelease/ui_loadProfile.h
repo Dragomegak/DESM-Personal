@@ -14,7 +14,7 @@
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
-#include <QtWidgets/QListView>
+#include <QtWidgets/QListWidget>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QWidget>
 
@@ -23,7 +23,6 @@ QT_BEGIN_NAMESPACE
 class Ui_LoadProfile
 {
 public:
-    QListView *applicationListView;
     QWidget *layoutWidget;
     QHBoxLayout *horizontalLayout;
     QLabel *currentUserLabel;
@@ -38,15 +37,13 @@ public:
     QPushButton *loadInBackgroundButton;
     QPushButton *loadProfile;
     QPushButton *backButton;
+    QListWidget *listWidget;
 
     void setupUi(QDialog *LoadProfile)
     {
         if (LoadProfile->objectName().isEmpty())
             LoadProfile->setObjectName(QString::fromUtf8("LoadProfile"));
         LoadProfile->resize(400, 300);
-        applicationListView = new QListView(LoadProfile);
-        applicationListView->setObjectName(QString::fromUtf8("applicationListView"));
-        applicationListView->setGeometry(QRect(70, 60, 256, 192));
         layoutWidget = new QWidget(LoadProfile);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
         layoutWidget->setGeometry(QRect(208, 10, 153, 15));
@@ -105,6 +102,9 @@ public:
 
         horizontalLayout_3->addWidget(backButton);
 
+        listWidget = new QListWidget(LoadProfile);
+        listWidget->setObjectName(QString::fromUtf8("listWidget"));
+        listWidget->setGeometry(QRect(70, 60, 256, 192));
 
         retranslateUi(LoadProfile);
 

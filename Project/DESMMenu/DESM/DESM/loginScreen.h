@@ -13,6 +13,10 @@ class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
+public slots:
+    void setUsernameText(QString input){username = input;}
+    QString getUsernameText(){return username;}
+
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
@@ -25,6 +29,27 @@ private slots:
 private:
     Ui::MainWindow *ui;
     MainScreen * mainScreen;
+};
+
+class saveUsername {
+    private:
+    QString usernametext;
+    public:
+    saveUsername(){
+        usernametext = "none specified";
+    }
+    saveUsername(QString inputusernametext){
+      usernametext = inputusernametext;
+    }
+    ~saveUsername(){
+        delete &usernametext;
+    }
+    void set(QString inputusernametext){
+        usernametext = inputusernametext;
+    }
+    QString get(){
+        return usernametext;
+    }
 };
 
 #endif // LOGINSCREEN_H

@@ -14,7 +14,7 @@
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
-#include <QtWidgets/QListView>
+#include <QtWidgets/QListWidget>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QWidget>
 
@@ -36,7 +36,7 @@ public:
     QPushButton *addProgram;
     QPushButton *deleteProgram;
     QPushButton *backButton;
-    QListView *applicationListView;
+    QListWidget *listWidget;
 
     void setupUi(QDialog *EditProfile)
     {
@@ -96,9 +96,9 @@ public:
 
         horizontalLayout_3->addWidget(backButton);
 
-        applicationListView = new QListView(EditProfile);
-        applicationListView->setObjectName(QString::fromUtf8("applicationListView"));
-        applicationListView->setGeometry(QRect(40, 70, 256, 181));
+        listWidget = new QListWidget(EditProfile);
+        listWidget->setObjectName(QString::fromUtf8("listWidget"));
+        listWidget->setGeometry(QRect(40, 60, 256, 192));
 
         retranslateUi(EditProfile);
 
