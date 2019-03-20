@@ -7,6 +7,7 @@ MainScreen::MainScreen(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::MainScreen)
 {
+
     ui->setupUi(this);
     QDir directory(".");
     QStringList files = directory.entryList(QStringList() << "*.txt" << "*.TXT",QDir::Files);

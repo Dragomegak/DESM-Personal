@@ -13,10 +13,13 @@ class MainScreen;
 class MainScreen : public QDialog
 {
     Q_OBJECT
+signals:
 
 public:
     explicit MainScreen(QWidget *parent = nullptr);
     ~MainScreen();
+    QString username;
+
 
 private slots:
     void on_createProfileButton_clicked();
@@ -24,6 +27,7 @@ private slots:
     void on_switchUserButton_clicked();
 
     void on_loadProfileButton_clicked();
+
 
 private:
     Ui::MainScreen *ui;
