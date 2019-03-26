@@ -8,6 +8,7 @@
 #include <QProcess>
 #include <QDir>
 #include <windows.h>
+#include <QKeyEvent>
 
 LoadProfile::LoadProfile(QWidget *parent) :
     QDialog(parent),
@@ -64,4 +65,10 @@ void LoadProfile::on_loadProfile_clicked()
             messageBox.setFixedSize(100,100);
         }
         file.close();
+}
+
+void LoadProfile::on_loadInBackgroundButton_clicked()
+{
+    //QKeyEvent * evt = new QKeyEvent(QEvent::Type::KeyPress, Qt::Key_2, Qt::ControlModifier); this works
+    //QCoreApplication::postEvent(reciever, evt); this doesnt
 }

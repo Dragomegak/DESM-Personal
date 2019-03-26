@@ -23,6 +23,8 @@ private slots:
 
     void on_loadProfile_clicked();
 
+    void on_loadInBackgroundButton_clicked();
+
 private:
     Ui::LoadProfile *ui;
     EditProfile *editProfile;
