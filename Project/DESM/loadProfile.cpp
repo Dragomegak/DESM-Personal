@@ -7,6 +7,7 @@
 #include <QMessageBox>
 #include <QProcess>
 #include <QDir>
+#include <windows.h>
 
 LoadProfile::LoadProfile(QWidget *parent) :
     QDialog(parent),
@@ -46,6 +47,7 @@ void LoadProfile::on_editProfileButton_clicked()
 
 void LoadProfile::on_loadProfile_clicked()
 {
+
         const QString& currentprofile = ui->listWidget->currentItem()->text();
         QFile file(currentprofile);
         //check file, if it exists continue

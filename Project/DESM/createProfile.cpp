@@ -60,3 +60,14 @@ void CreateProfile::on_addProgram_clicked()
 
 }
 
+
+void CreateProfile::on_refresh_clicked()
+{
+    ui->listWidget->clear();
+    QDir directory(".");
+    QStringList files = directory.entryList(QStringList() << "*.txt" << "*.TXT",QDir::Files);
+    foreach(QString filename, files) {
+            ui->listWidget->addItem(filename);
+    }
+
+}

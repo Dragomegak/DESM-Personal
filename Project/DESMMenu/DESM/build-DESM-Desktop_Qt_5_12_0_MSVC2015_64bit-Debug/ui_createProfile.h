@@ -27,7 +27,6 @@ public:
     QWidget *layoutWidget_3;
     QHBoxLayout *horizontalLayout_3;
     QPushButton *addProgram;
-    QPushButton *deleteProgram;
     QPushButton *backButton;
     QWidget *layoutWidget_2;
     QHBoxLayout *horizontalLayout_2;
@@ -38,6 +37,7 @@ public:
     QLabel *currentUserLabel;
     QLabel *showUsernameLabel;
     QListWidget *listWidget;
+    QPushButton *refresh;
 
     void setupUi(QDialog *CreateProfile)
     {
@@ -54,11 +54,6 @@ public:
         addProgram->setObjectName(QString::fromUtf8("addProgram"));
 
         horizontalLayout_3->addWidget(addProgram);
-
-        deleteProgram = new QPushButton(layoutWidget_3);
-        deleteProgram->setObjectName(QString::fromUtf8("deleteProgram"));
-
-        horizontalLayout_3->addWidget(deleteProgram);
 
         backButton = new QPushButton(layoutWidget_3);
         backButton->setObjectName(QString::fromUtf8("backButton"));
@@ -100,6 +95,9 @@ public:
         listWidget = new QListWidget(CreateProfile);
         listWidget->setObjectName(QString::fromUtf8("listWidget"));
         listWidget->setGeometry(QRect(50, 60, 256, 192));
+        refresh = new QPushButton(CreateProfile);
+        refresh->setObjectName(QString::fromUtf8("refresh"));
+        refresh->setGeometry(QRect(310, 60, 75, 23));
 
         retranslateUi(CreateProfile);
 
@@ -110,11 +108,11 @@ public:
     {
         CreateProfile->setWindowTitle(QApplication::translate("CreateProfile", "Dialog", nullptr));
         addProgram->setText(QApplication::translate("CreateProfile", "Add Program", nullptr));
-        deleteProgram->setText(QApplication::translate("CreateProfile", "Delete Last Progam", nullptr));
         backButton->setText(QApplication::translate("CreateProfile", "Back", nullptr));
         profileNameLabel->setText(QApplication::translate("CreateProfile", "Set Profile Name:", nullptr));
         currentUserLabel->setText(QApplication::translate("CreateProfile", "Current User:", nullptr));
         showUsernameLabel->setText(QApplication::translate("CreateProfile", "not implemented", nullptr));
+        refresh->setText(QApplication::translate("CreateProfile", "refresh", nullptr));
     } // retranslateUi
 
 };

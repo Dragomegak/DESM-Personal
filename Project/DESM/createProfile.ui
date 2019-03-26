@@ -31,13 +31,6 @@
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="deleteProgram">
-      <property name="text">
-       <string>Delete Last Progam</string>
-      </property>
-     </widget>
-    </item>
-    <item>
      <widget class="QPushButton" name="backButton">
       <property name="text">
        <string>Back</string>
@@ -102,6 +95,19 @@
      <width>256</width>
      <height>192</height>
     </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="refresh">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>60</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>refresh</string>
    </property>
   </widget>
  </widget>
