@@ -14,8 +14,12 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public slots:
-    void setUsernameText(QString input){username = input;}
-    QString getUsernameText(){return username;}
+    void setUsernameText(QString input){
+        username = input;
+    }
+    QString getUsernameText(){
+        return username;
+    }
 
 public:
     explicit MainWindow(QWidget *parent = nullptr);

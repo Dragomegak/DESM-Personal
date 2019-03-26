@@ -1,6 +1,9 @@
 #include "loginScreen.h"
 #include "ui_loginScreen.h"
 #include <QTextEdit>
+#include <QDesktopServices>
+#include <QFile>
+#include <QProcess>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -27,6 +30,8 @@ void MainWindow::on_signInButton_clicked()
     //Shows Username
     //QMessageBox::information(this, "Username", ui->usernameLineEdit->text());
     //Stores Username
+    QProcess *proc = new QProcess(this);
+    proc->start("virgo.exe");
     setUsernameText(ui->usernameLineEdit->text());
     QMessageBox::information(this, "Username", getUsernameText());
     //QMessageBox::information(this, "Username", user.get());
