@@ -20,6 +20,8 @@ private slots:
 
     void on_addProgram_clicked();
 
+    void on_refresh_clicked();
+
 private:
     Ui::EditProfile *ui;
 };

@@ -10,16 +10,12 @@ EditProfile::EditProfile(QWidget *parent) :
 {
     ui->setupUi(this);
     //Prereq to loading list
-    QFile file("profile.txt");
-    //check file, if it exists continue
-    if (file.open(QIODevice::ReadOnly | QIODevice::Text)){
-        QTextStream stream(&file);
-        while (!stream.atEnd()){
-            QString line = stream.readLine();
-            ui->listWidget->addItem(line);
-            //plans: store lines in a vector or array
-        }
+    QDir directory(".");
+    QStringList files = directory.entryList(QStringList() << "*.txt" << "*.TXT",QDir::Files);
+    foreach(QString filename, files) {
+            ui->listWidget->addItem(filename);
     }
+
 
     QString username = "username";
     ui->showUsernameLabel->setText(username);
@@ -40,11 +36,27 @@ void EditProfile::on_backButton_clicked()
 
 void EditProfile::on_addProgram_clicked()
 {
+    const QString& currentprofile = ui->listWidget->currentItem()->text();
+    QFile file(currentprofile);
     QString filename = QFileDialog::getOpenFileName(
                 this,
                 tr("Add Program exe"),
                 "C:\\Program Files (x86)",
                 "All Files (*.*);; Exe Files (*.exe)"
                 );
-    QMessageBox::information(this, tr("File Name"), filename);
+    if (file.open(QIODevice::ReadWrite | QIODevice::Text | QIODevice::Append)){
+        QTextStream stream(&file);
+        stream << filename << endl;
+        file.close();
+    }
+}
+
+void EditProfile::on_refresh_clicked()
+{
+    ui->listWidget->clear();
+    QDir directory(".");
+    QStringList files = directory.entryList(QStringList() << "*.txt" << "*.TXT",QDir::Files);
+    foreach(QString filename, files) {
+            ui->listWidget->addItem(filename);
+    }
 }

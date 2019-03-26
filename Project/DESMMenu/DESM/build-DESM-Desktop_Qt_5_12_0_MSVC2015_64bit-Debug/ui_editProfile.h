@@ -37,6 +37,7 @@ public:
     QPushButton *deleteProgram;
     QPushButton *backButton;
     QListWidget *listWidget;
+    QPushButton *refresh;
 
     void setupUi(QDialog *EditProfile)
     {
@@ -99,6 +100,9 @@ public:
         listWidget = new QListWidget(EditProfile);
         listWidget->setObjectName(QString::fromUtf8("listWidget"));
         listWidget->setGeometry(QRect(40, 60, 256, 192));
+        refresh = new QPushButton(EditProfile);
+        refresh->setObjectName(QString::fromUtf8("refresh"));
+        refresh->setGeometry(QRect(300, 70, 75, 23));
 
         retranslateUi(EditProfile);
 
@@ -113,8 +117,9 @@ public:
         currentUserLabel->setText(QApplication::translate("EditProfile", "Current User:", nullptr));
         showUsernameLabel->setText(QApplication::translate("EditProfile", "not implemented", nullptr));
         addProgram->setText(QApplication::translate("EditProfile", "Add Program", nullptr));
-        deleteProgram->setText(QApplication::translate("EditProfile", "Delete Program", nullptr));
+        deleteProgram->setText(QApplication::translate("EditProfile", "Delete Last Program", nullptr));
         backButton->setText(QApplication::translate("EditProfile", "Back", nullptr));
+        refresh->setText(QApplication::translate("EditProfile", "Refresh", nullptr));
     } // retranslateUi
 
 };
