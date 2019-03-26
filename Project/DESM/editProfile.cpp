@@ -15,8 +15,6 @@ EditProfile::EditProfile(QWidget *parent) :
     foreach(QString filename, files) {
             ui->listWidget->addItem(filename);
     }
-
-
     QString username = "username";
     ui->showUsernameLabel->setText(username);
 }
@@ -38,6 +36,7 @@ void EditProfile::on_addProgram_clicked()
 {
     const QString& currentprofile = ui->listWidget->currentItem()->text();
     QFile file(currentprofile);
+    ui->showCurrentProfileLabel->setText(currentprofile);
     QString filename = QFileDialog::getOpenFileName(
                 this,
                 tr("Add Program exe"),

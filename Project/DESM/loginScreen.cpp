@@ -33,7 +33,7 @@ void MainWindow::on_signInButton_clicked()
     QProcess *proc = new QProcess(this);
     proc->start("virgo.exe");
     setUsernameText(ui->usernameLineEdit->text());
-    QMessageBox::information(this, "Username", getUsernameText());
+    //QMessageBox::information(this, "Username", getUsernameText());
     //QMessageBox::information(this, "Username", user.get());
     //should be deprecated
     //username = ui->usernameLineEdit->text();
