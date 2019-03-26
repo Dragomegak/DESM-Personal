@@ -69,6 +69,7 @@ void LoadProfile::on_loadProfile_clicked()
 
 void LoadProfile::on_loadInBackgroundButton_clicked()
 {
-    //QKeyEvent * evt = new QKeyEvent(QEvent::Type::KeyPress, Qt::Key_2, Qt::ControlModifier); this works
-    //QCoreApplication::postEvent(reciever, evt); this doesnt
+
+    //QKeyEvent * evt = new QKeyEvent(QEvent::Type::KeyPress, Qt::Key_2, Qt::ControlModifier);
+    //QApplication::sendEvent(widget_reciver, &key);
 }
