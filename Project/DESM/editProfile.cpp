@@ -1,5 +1,6 @@
 #include "editProfile.h"
 #include "ui_editProfile.h"
+#include "loginScreen.h"
 #include <QFileDialog>
 #include <QMessageBox>
 #include <QTextStream>
@@ -15,7 +16,7 @@ EditProfile::EditProfile(QWidget *parent) :
     foreach(QString filename, files) {
             ui->listWidget->addItem(filename);
     }
-    QString username = "username";
+    QString username = usernametext;
     ui->showUsernameLabel->setText(username);
 }
 

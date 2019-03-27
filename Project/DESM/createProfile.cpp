@@ -22,7 +22,7 @@ CreateProfile::CreateProfile(QWidget *parent) :
             ui->listWidget->addItem(filename);
     }
 
-    QString username = "username";
+    QString username = usernametext;
     ui->showUsernameLabel->setText(username);
 }
 

@@ -12,23 +12,19 @@ class MainWindow;
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
+signals:
+    void username(QString);
 
-public slots:
-    void setUsernameText(QString input){
-        username = input;
-    }
-    QString getUsernameText(){
-        return username;
-    }
 
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    QString username;
-    QString password;
+    void usernameTextPush(const QString& newUsername){
+       emit username(newUsername);
+    }
 
 private slots:
-    void on_signInButton_clicked();
+    void usernameEmit();
 
 private:
     Ui::MainWindow *ui;
@@ -55,5 +51,5 @@ class saveUsername {
         return usernametext;
     }
 };
-
+extern QString usernametext;
 #endif // LOGINSCREEN_H

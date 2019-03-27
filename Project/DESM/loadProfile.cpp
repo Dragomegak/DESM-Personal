@@ -9,6 +9,7 @@
 #include <QDir>
 #include <windows.h>
 #include <QKeyEvent>
+#include "loginScreen.h"
 
 LoadProfile::LoadProfile(QWidget *parent) :
     QDialog(parent),
@@ -21,7 +22,7 @@ LoadProfile::LoadProfile(QWidget *parent) :
             ui->listWidget->addItem(filename);
     }
 
-    QString username = "username";
+    QString username = usernametext;
     ui->showUsernameLabel->setText(username);
 }
 

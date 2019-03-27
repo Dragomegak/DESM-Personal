@@ -3,6 +3,7 @@
 #include "loginScreen.h"
 #include <QDir>
 
+
 MainScreen::MainScreen(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::MainScreen)
@@ -14,7 +15,10 @@ MainScreen::MainScreen(QWidget *parent) :
     foreach(QString filename, files){
         ui->comboBox->addItem(filename);
     }
-    QString username = "username";
+   /* QString username = MainWindow::usernameEmit();
+    connect(ui->showUsernameLabel, SIGNAL(usernameEmit()), this, SLOT(updateLabel()));*/
+
+    QString username = usernametext;
     ui->showUsernameLabel->setText(username);
 }
 

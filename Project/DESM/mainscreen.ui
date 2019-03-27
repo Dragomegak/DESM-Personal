@@ -13,12 +13,12 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>50</x>
      <y>240</y>
-     <width>239</width>
+     <width>254</width>
      <height>25</height>
     </rect>
    </property>
@@ -46,13 +46,13 @@
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>30</x>
      <y>110</y>
      <width>261</width>
-     <height>22</height>
+     <height>24</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -68,13 +68,13 @@
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>170</x>
      <y>10</y>
-     <width>153</width>
-     <height>15</height>
+     <width>156</width>
+     <height>16</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout_3">
@@ -88,7 +88,7 @@
     <item>
      <widget class="QLabel" name="showUsernameLabel">
       <property name="text">
-       <string>not implemented</string>
+       <string>username</string>
       </property>
      </widget>
     </item>
