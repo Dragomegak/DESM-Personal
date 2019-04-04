@@ -49,7 +49,11 @@ void CreateProfile::on_addProgram_clicked()
                 );
     QString profilename = ui->lineEdit->text() + ".txt";
     QString profile = profilename;
-
+    QString path = "C:/profiles/";
+    qDebug() << QDir::currentPath();
+        if (!QDir::setCurrent(QStringLiteral("C://profiles")))
+            qDebug() << "Could not change the current working directory";
+        qDebug() << QDir::currentPath();
     QFile file(profile);
     if (file.open(QIODevice::ReadWrite | QIODevice::Text | QIODevice::Append)){
         QTextStream stream(&file);
