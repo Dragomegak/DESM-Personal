@@ -34,7 +34,6 @@ public:
     QWidget *layoutWidget2;
     QHBoxLayout *horizontalLayout_3;
     QPushButton *editProfileButton;
-    QPushButton *loadInBackgroundButton;
     QPushButton *loadProfile;
     QPushButton *backButton;
     QListWidget *listWidget;
@@ -87,11 +86,6 @@ public:
 
         horizontalLayout_3->addWidget(editProfileButton);
 
-        loadInBackgroundButton = new QPushButton(layoutWidget2);
-        loadInBackgroundButton->setObjectName(QString::fromUtf8("loadInBackgroundButton"));
-
-        horizontalLayout_3->addWidget(loadInBackgroundButton);
-
         loadProfile = new QPushButton(layoutWidget2);
         loadProfile->setObjectName(QString::fromUtf8("loadProfile"));
 
@@ -119,7 +113,6 @@ public:
         currentProfileLabel->setText(QApplication::translate("LoadProfile", "Current Profile:", nullptr));
         showCurrentProfileLabel->setText(QApplication::translate("LoadProfile", "None Selected", nullptr));
         editProfileButton->setText(QApplication::translate("LoadProfile", "Edit Profile", nullptr));
-        loadInBackgroundButton->setText(QApplication::translate("LoadProfile", "Load in BG", nullptr));
         loadProfile->setText(QApplication::translate("LoadProfile", "Load Profile", nullptr));
         backButton->setText(QApplication::translate("LoadProfile", "Back", nullptr));
     } // retranslateUi

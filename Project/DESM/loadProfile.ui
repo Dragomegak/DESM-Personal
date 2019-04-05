@@ -83,13 +83,6 @@
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="loadInBackgroundButton">
-      <property name="text">
-       <string>Load in BG</string>
-      </property>
-     </widget>
-    </item>
-    <item>
      <widget class="QPushButton" name="loadProfile">
       <property name="text">
        <string>Load Profile</string>

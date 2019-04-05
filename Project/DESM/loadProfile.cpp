@@ -68,9 +68,3 @@ void LoadProfile::on_loadProfile_clicked()
         file.close();
 }
 
-void LoadProfile::on_loadInBackgroundButton_clicked()
-{
-
-    //QKeyEvent * evt = new QKeyEvent(QEvent::Type::KeyPress, Qt::Key_2, Qt::ControlModifier);
-    //QApplication::sendEvent(widget_reciver, &key);
-}

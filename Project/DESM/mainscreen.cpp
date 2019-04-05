@@ -48,3 +48,13 @@ void MainScreen::on_loadProfileButton_clicked()
     loadProfile = new LoadProfile(this); //destructor for this culmination of windows
     loadProfile->show(); //shows mainScreen.ui
 }
+
+void MainScreen::on_refreshButton_clicked()
+{
+    ui->comboBox->clear();
+    QDir directory(".");
+    QStringList files = directory.entryList(QStringList() << "*.txt" << "*.TXT",QDir::Files);
+    foreach(QString filename, files) {
+            ui->comboBox->addItem(filename);
+    }
+}

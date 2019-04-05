@@ -36,6 +36,7 @@ public:
     QHBoxLayout *horizontalLayout_3;
     QLabel *currentUserLabel;
     QLabel *showUsernameLabel;
+    QPushButton *refreshButton;
 
     void setupUi(QDialog *MainScreen)
     {
@@ -95,6 +96,9 @@ public:
 
         horizontalLayout_3->addWidget(showUsernameLabel);
 
+        refreshButton = new QPushButton(MainScreen);
+        refreshButton->setObjectName(QString::fromUtf8("refreshButton"));
+        refreshButton->setGeometry(QRect(290, 110, 75, 23));
 
         retranslateUi(MainScreen);
 
@@ -110,6 +114,7 @@ public:
         currentProfileLabel->setText(QApplication::translate("MainScreen", "Current Profile:", nullptr));
         currentUserLabel->setText(QApplication::translate("MainScreen", "Current User:", nullptr));
         showUsernameLabel->setText(QApplication::translate("MainScreen", "username", nullptr));
+        refreshButton->setText(QApplication::translate("MainScreen", "refresh", nullptr));
     } // retranslateUi
 
 };

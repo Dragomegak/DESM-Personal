@@ -28,6 +28,7 @@ private slots:
 
     void on_loadProfileButton_clicked();
 
+    void on_refreshButton_clicked();
 
 private:
     Ui::MainScreen *ui;
