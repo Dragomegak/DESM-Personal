@@ -4,6 +4,8 @@
 #include <QDesktopServices>
 #include <QFile>
 #include <QProcess>
+#include <QtDebug>
+#include <QDir>
 
 QString usernametext;
 
@@ -22,6 +24,10 @@ MainWindow::~MainWindow()
 
 void MainWindow::usernameEmit()
 {
+    qDebug() << QDir::currentPath();
+        if (!QDir::setCurrent(QCoreApplication::applicationDirPath()))
+            qDebug() << "Could not change the current working directory";
+    qDebug() << QDir::currentPath();
     QProcess *proc = new QProcess(this);
     proc->start("virgo.exe");
     usernametext = ui->usernameLineEdit->text();
