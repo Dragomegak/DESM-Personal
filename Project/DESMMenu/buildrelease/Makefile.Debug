@@ -1775,7 +1775,8 @@ debug\editProfile.obj: ..\..\DESM\editProfile.cpp ..\..\DESM\editProfile.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qfiledialog.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtCore\qdir.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtCore\qfileinfo.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtCore\QTextStream
+		E:\QT\5.12.0\msvc2017_64\include\QtCore\QTextStream \
+		E:\QT\5.12.0\msvc2017_64\include\QtCore\QDebug
 
 debug\moc_loginScreen.obj: debug\moc_loginScreen.cpp 
 

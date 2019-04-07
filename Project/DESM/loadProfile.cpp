@@ -49,22 +49,22 @@ void LoadProfile::on_editProfileButton_clicked()
 
 void LoadProfile::on_loadProfile_clicked()
 {
-
-        const QString& currentprofile = ui->listWidget->currentItem()->text();
-        QFile file(currentprofile);
-        //check file, if it exists continue
-        if (file.open(QIODevice::ReadOnly | QIODevice::Text)){
-            QTextStream stream(&file);
-            while (!stream.atEnd()){
-                QString line = stream.readLine();
-                QDesktopServices::openUrl(QUrl("file:///"+line, QUrl::TolerantMode));
+        if(ui->listWidget->selectedItems().size() != 0){
+            const QString& currentprofile = ui->listWidget->currentItem()->text();
+            QFile file(currentprofile);
+            //check file, if it exists continue
+            if (file.open(QIODevice::ReadOnly | QIODevice::Text)){
+                QTextStream stream(&file);
+                while (!stream.atEnd()){
+                    QString line = stream.readLine();
+                    QDesktopServices::openUrl(QUrl("file:///"+line, QUrl::TolerantMode));
+                }
+                file.close();
             }
         }
         else{
-            QMessageBox messageBox;
-            messageBox.critical(0, "Error", "Profile not made, please create a profile");
-            messageBox.setFixedSize(100,100);
+            QMessageBox::warning(this,tr("Error"),tr("Please click on a profile on the list"),QMessageBox::Ok);
         }
-        file.close();
+
 }
 

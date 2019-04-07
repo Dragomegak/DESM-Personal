@@ -46,6 +46,10 @@ FORMS += \
     createProfile.ui \
     editProfile.ui
 
+win32 {
+    RC_FILE = desm.rc
+}
+
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
@@ -53,3 +57,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 DISTFILES += \
     virgo.exe
+

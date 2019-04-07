@@ -41,6 +41,7 @@ void CreateProfile::on_backButton_clicked()
 
 void CreateProfile::on_addProgram_clicked()
 {
+
     QString filename = QFileDialog::getOpenFileName(
                 this,
                 tr("Add Program exe"),

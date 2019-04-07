@@ -4,6 +4,7 @@
 #include <QFileDialog>
 #include <QMessageBox>
 #include <QTextStream>
+#include <QDebug>
 
 EditProfile::EditProfile(QWidget *parent) :
     QDialog(parent),
@@ -35,19 +36,23 @@ void EditProfile::on_backButton_clicked()
 
 void EditProfile::on_addProgram_clicked()
 {
-    const QString& currentprofile = ui->listWidget->currentItem()->text();
-    QFile file(currentprofile);
-    ui->showCurrentProfileLabel->setText(currentprofile);
-    QString filename = QFileDialog::getOpenFileName(
-                this,
-                tr("Add Program exe"),
-                "C:\\Program Files (x86)",
-                "All Files (*.*);; Exe Files (*.exe)"
-                );
-    if (file.open(QIODevice::ReadWrite | QIODevice::Text | QIODevice::Append)){
-        QTextStream stream(&file);
-        stream << filename << endl;
-        file.close();
+    if(ui->listWidget->selectedItems().size() != 0){
+        const QString& currentprofile = ui->listWidget->currentItem()->text();
+        QFile file(currentprofile);
+        QString filename = QFileDialog::getOpenFileName(
+                    this,
+                    tr("Add Program exe"),
+                    "C:\\Program Files (x86)",
+                    "All Files (*.*);; Exe Files (*.exe)"
+                    );
+        if (file.open(QIODevice::ReadWrite | QIODevice::Text | QIODevice::Append)){
+            QTextStream stream(&file);
+            stream << filename << endl;
+            file.close();
+        }
+    }
+    else{
+        QMessageBox::warning(this,tr("Error"),tr("Please click on a profile on the list"),QMessageBox::Ok);
     }
 }
 
@@ -58,5 +63,17 @@ void EditProfile::on_refresh_clicked()
     QStringList files = directory.entryList(QStringList() << "*.txt" << "*.TXT",QDir::Files);
     foreach(QString filename, files) {
             ui->listWidget->addItem(filename);
+    }
+}
+
+void EditProfile::on_deleteFile_clicked()
+{
+    if (ui->listWidget->selectedItems().size() != 0){
+        const QString& currentprofile = ui->listWidget->currentItem()->text();
+        QFile file(currentprofile);
+        file.remove();
+    }
+    else{
+        QMessageBox::warning(this,tr("Error"),tr("Please click on a profile on the list"),QMessageBox::Ok);
     }
 }

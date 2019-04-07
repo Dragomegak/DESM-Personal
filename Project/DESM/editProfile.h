@@ -22,6 +22,8 @@ private slots:
 
     void on_refresh_clicked();
 
+    void on_deleteFile_clicked();
+
 private:
     Ui::EditProfile *ui;
 };

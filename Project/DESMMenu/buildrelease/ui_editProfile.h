@@ -34,7 +34,7 @@ public:
     QWidget *layoutWidget_3;
     QHBoxLayout *horizontalLayout_3;
     QPushButton *addProgram;
-    QPushButton *deleteProgram;
+    QPushButton *deleteFile;
     QPushButton *backButton;
     QListWidget *listWidget;
     QPushButton *refresh;
@@ -87,10 +87,10 @@ public:
 
         horizontalLayout_3->addWidget(addProgram);
 
-        deleteProgram = new QPushButton(layoutWidget_3);
-        deleteProgram->setObjectName(QString::fromUtf8("deleteProgram"));
+        deleteFile = new QPushButton(layoutWidget_3);
+        deleteFile->setObjectName(QString::fromUtf8("deleteFile"));
 
-        horizontalLayout_3->addWidget(deleteProgram);
+        horizontalLayout_3->addWidget(deleteFile);
 
         backButton = new QPushButton(layoutWidget_3);
         backButton->setObjectName(QString::fromUtf8("backButton"));
@@ -117,7 +117,7 @@ public:
         currentUserLabel->setText(QApplication::translate("EditProfile", "Current User:", nullptr));
         showUsernameLabel->setText(QApplication::translate("EditProfile", "username", nullptr));
         addProgram->setText(QApplication::translate("EditProfile", "Add Program", nullptr));
-        deleteProgram->setText(QApplication::translate("EditProfile", "Delete Last Program", nullptr));
+        deleteFile->setText(QApplication::translate("EditProfile", "Delete File", nullptr));
         backButton->setText(QApplication::translate("EditProfile", "Back", nullptr));
         refresh->setText(QApplication::translate("EditProfile", "Refresh", nullptr));
     } // retranslateUi
