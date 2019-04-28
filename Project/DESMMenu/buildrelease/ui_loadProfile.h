@@ -33,8 +33,8 @@ public:
     QLabel *showCurrentProfileLabel;
     QWidget *layoutWidget2;
     QHBoxLayout *horizontalLayout_3;
-    QPushButton *editProfileButton;
     QPushButton *loadProfile;
+    QPushButton *editProfileButton;
     QPushButton *backButton;
     QListWidget *listWidget;
 
@@ -77,19 +77,19 @@ public:
 
         layoutWidget2 = new QWidget(LoadProfile);
         layoutWidget2->setObjectName(QString::fromUtf8("layoutWidget2"));
-        layoutWidget2->setGeometry(QRect(50, 260, 340, 25));
+        layoutWidget2->setGeometry(QRect(20, 260, 371, 25));
         horizontalLayout_3 = new QHBoxLayout(layoutWidget2);
         horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
         horizontalLayout_3->setContentsMargins(0, 0, 0, 0);
-        editProfileButton = new QPushButton(layoutWidget2);
-        editProfileButton->setObjectName(QString::fromUtf8("editProfileButton"));
-
-        horizontalLayout_3->addWidget(editProfileButton);
-
         loadProfile = new QPushButton(layoutWidget2);
         loadProfile->setObjectName(QString::fromUtf8("loadProfile"));
 
         horizontalLayout_3->addWidget(loadProfile);
+
+        editProfileButton = new QPushButton(layoutWidget2);
+        editProfileButton->setObjectName(QString::fromUtf8("editProfileButton"));
+
+        horizontalLayout_3->addWidget(editProfileButton);
 
         backButton = new QPushButton(layoutWidget2);
         backButton->setObjectName(QString::fromUtf8("backButton"));
@@ -112,8 +112,8 @@ public:
         showUsernameLabel->setText(QApplication::translate("LoadProfile", "username", nullptr));
         currentProfileLabel->setText(QApplication::translate("LoadProfile", "Current Profile:", nullptr));
         showCurrentProfileLabel->setText(QApplication::translate("LoadProfile", "None Selected", nullptr));
-        editProfileButton->setText(QApplication::translate("LoadProfile", "Edit Profile", nullptr));
         loadProfile->setText(QApplication::translate("LoadProfile", "Load Profile", nullptr));
+        editProfileButton->setText(QApplication::translate("LoadProfile", "Edit Profile", nullptr));
         backButton->setText(QApplication::translate("LoadProfile", "Back", nullptr));
     } // retranslateUi
 

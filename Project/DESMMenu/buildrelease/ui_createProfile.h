@@ -14,7 +14,6 @@
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
-#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QListWidget>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QWidget>
@@ -31,7 +30,6 @@ public:
     QWidget *layoutWidget_2;
     QHBoxLayout *horizontalLayout_2;
     QLabel *profileNameLabel;
-    QLineEdit *lineEdit;
     QWidget *layoutWidget;
     QHBoxLayout *horizontalLayout;
     QLabel *currentUserLabel;
@@ -71,11 +69,6 @@ public:
 
         horizontalLayout_2->addWidget(profileNameLabel);
 
-        lineEdit = new QLineEdit(layoutWidget_2);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
-
-        horizontalLayout_2->addWidget(lineEdit);
-
         layoutWidget = new QWidget(CreateProfile);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
         layoutWidget->setGeometry(QRect(190, 10, 156, 16));
@@ -109,7 +102,7 @@ public:
         CreateProfile->setWindowTitle(QApplication::translate("CreateProfile", "Dialog", nullptr));
         addProgram->setText(QApplication::translate("CreateProfile", "Add Program", nullptr));
         backButton->setText(QApplication::translate("CreateProfile", "Back", nullptr));
-        profileNameLabel->setText(QApplication::translate("CreateProfile", "Set Profile Name:", nullptr));
+        profileNameLabel->setText(QApplication::translate("CreateProfile", "Profiles", nullptr));
         currentUserLabel->setText(QApplication::translate("CreateProfile", "Current User:", nullptr));
         showUsernameLabel->setText(QApplication::translate("CreateProfile", "username", nullptr));
         refresh->setText(QApplication::translate("CreateProfile", "refresh", nullptr));

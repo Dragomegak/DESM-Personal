@@ -68,24 +68,24 @@
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>50</x>
+     <x>20</x>
      <y>260</y>
-     <width>340</width>
+     <width>371</width>
      <height>25</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout_3">
     <item>
-     <widget class="QPushButton" name="editProfileButton">
+     <widget class="QPushButton" name="loadProfile">
       <property name="text">
-       <string>Edit Profile</string>
+       <string>Load Profile</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="loadProfile">
+     <widget class="QPushButton" name="editProfileButton">
       <property name="text">
-       <string>Load Profile</string>
+       <string>Edit Profile</string>
       </property>
      </widget>
     </item>

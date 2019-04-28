@@ -59,3 +59,8 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 DISTFILES += \
     virgo.exe
 
+
+win32: LIBS += -L'C:/Program Files (x86)/Windows Kits/8.1/Lib/winv6.3/um/x64/' -lUser32
+
+INCLUDEPATH += 'C:/Program Files (x86)/Windows Kits/8.1/Lib/winv6.3/um/x64'
+DEPENDPATH += 'C:/Program Files (x86)/Windows Kits/8.1/Lib/winv6.3/um/x64'

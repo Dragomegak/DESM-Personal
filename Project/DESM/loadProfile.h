@@ -2,6 +2,7 @@
 #define LOADPROFILE_H
 
 #include <QDialog>
+#include <QShortcut>
 #include "editProfile.h"
 
 namespace Ui {

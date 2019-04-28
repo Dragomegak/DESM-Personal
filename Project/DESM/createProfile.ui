@@ -52,12 +52,9 @@
     <item>
      <widget class="QLabel" name="profileNameLabel">
       <property name="text">
-       <string>Set Profile Name:</string>
+       <string>Profiles</string>
       </property>
      </widget>
-    </item>
-    <item>
-     <widget class="QLineEdit" name="lineEdit"/>
     </item>
    </layout>
   </widget>
