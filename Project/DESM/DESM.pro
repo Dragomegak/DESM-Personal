@@ -60,7 +60,7 @@ win32: LIBS += -L'C:/Program Files (x86)/Windows Kits/8.1/Lib/winv6.3/um/x64/' -
 INCLUDEPATH += 'C:/Program Files (x86)/Windows Kits/8.1/Lib/winv6.3/um/x64'
 DEPENDPATH += 'C:/Program Files (x86)/Windows Kits/8.1/Lib/winv6.3/um/x64'
 
-#win32 {
-#CONFIG += embed_manifest_exe
-#QMAKE_LFLAGS_WINDOWS += /MANIFESTUAC:level=\'requireAdministrator\'
-#}
+win32 {
+CONFIG += embed_manifest_exe
+QMAKE_LFLAGS_WINDOWS += /MANIFESTUAC:level=\'requireAdministrator\'
+}

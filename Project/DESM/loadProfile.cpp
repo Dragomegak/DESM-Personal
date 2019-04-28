@@ -72,6 +72,10 @@ void LoadProfile::on_loadProfile_clicked()
 
 void LoadProfile::on_desktopOneButton_clicked()
 {
+    keybd_event(VK_CONTROL, 0, 0, 0);
+    keybd_event(0x31, 0, 0, 0);
+    keybd_event(0x31, 0, KEYEVENTF_KEYUP, 0);
+    keybd_event(VK_CONTROL, 0, KEYEVENTF_KEYUP, 0);
     keybd_event(VK_MENU, 0, 0, 0);
     keybd_event(0x31, 0, 0, 0);
     keybd_event(0x31, 0, KEYEVENTF_KEYUP, 0);
@@ -80,6 +84,10 @@ void LoadProfile::on_desktopOneButton_clicked()
 
 void LoadProfile::on_desktopTwoButton_clicked()
 {
+    keybd_event(VK_CONTROL, 0, 0, 0);
+    keybd_event(0x32, 0, 0, 0);
+    keybd_event(0x32, 0, KEYEVENTF_KEYUP, 0);
+    keybd_event(VK_CONTROL, 0, KEYEVENTF_KEYUP, 0);
     keybd_event(VK_MENU, 0, 0, 0);
     keybd_event(0x32, 0, 0, 0);
     keybd_event(0x32, 0, KEYEVENTF_KEYUP, 0);
@@ -88,6 +96,10 @@ void LoadProfile::on_desktopTwoButton_clicked()
 
 void LoadProfile::on_desktopThreeButton_clicked()
 {
+    keybd_event(VK_CONTROL, 0, 0, 0);
+    keybd_event(0x33, 0, 0, 0);
+    keybd_event(0x33, 0, KEYEVENTF_KEYUP, 0);
+    keybd_event(VK_CONTROL, 0, KEYEVENTF_KEYUP, 0);
     keybd_event(VK_MENU, 0, 0, 0);
     keybd_event(0x33, 0, 0, 0);
     keybd_event(0x33, 0, KEYEVENTF_KEYUP, 0);
@@ -96,6 +108,10 @@ void LoadProfile::on_desktopThreeButton_clicked()
 
 void LoadProfile::on_desktopFourButton_clicked()
 {
+    keybd_event(VK_CONTROL, 0, 0, 0);
+    keybd_event(0x34, 0, 0, 0);
+    keybd_event(0x34, 0, KEYEVENTF_KEYUP, 0);
+    keybd_event(VK_CONTROL, 0, KEYEVENTF_KEYUP, 0);
     keybd_event(VK_MENU, 0, 0, 0);
     keybd_event(0x34, 0, 0, 0);
     keybd_event(0x34, 0, KEYEVENTF_KEYUP, 0);
