@@ -46,10 +46,10 @@ FORMS += \
     createProfile.ui \
     editProfile.ui
 
-win32 {
-CONFIG += embed_manifest_exe
-QMAKE_LFLAGS_WINDOWS += /MANIFESTUAC:level=\'requireAdministrator\'
-}
+#win32 {
+#CONFIG += embed_manifest_exe
+#QMAKE_LFLAGS_WINDOWS += /MANIFESTUAC:level=\'requireAdministrator\'
+#}
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

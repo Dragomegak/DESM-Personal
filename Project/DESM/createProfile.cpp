@@ -9,6 +9,7 @@
 #include <QFileInfo>
 #include <QtCore>
 #include <QtGui>
+#include <QFileInfo>
 
 CreateProfile::CreateProfile(QWidget *parent) :
     QDialog(parent),
@@ -48,10 +49,13 @@ void CreateProfile::on_addProgram_clicked()
                 "C:\\Program Files (x86)",
                 "All Files (*.*);; Exe Files (*.exe)"
                 );
-    QString profilename = filename + ".txt";
-    QString profile = filename;
-    //QString profilename = ui->lineEdit->text() + ".txt";
-    //QString profile = profilename;
+
+
+    QString profilename = QFileInfo(filename).fileName() + ".txt"; //ui->lineEdit->text() + ".txt";
+
+    QString profile = profilename; //filename.mid(filename.lastIndexOf("/"));
+
+    qDebug() << profile; //profile;
     qDebug() << QDir::currentPath();
         if (!QDir::setCurrent(QCoreApplication::applicationDirPath()))
             qDebug() << "Could not change the current working directory";

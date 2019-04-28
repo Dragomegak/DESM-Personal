@@ -16,7 +16,7 @@ CFLAGS        = -nologo -Zc:wchar_t -FS -Zc:strictStrings -O2 -MD -W3 -w44456 -w
 CXXFLAGS      = -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -O2 -MD -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -EHsc $(DEFINES)
 INCPATH       = -I..\..\DESM -I. -IE:\QT\5.12.0\msvc2017_64\include -IE:\QT\5.12.0\msvc2017_64\include\QtWidgets -IE:\QT\5.12.0\msvc2017_64\include\QtGui -IE:\QT\5.12.0\msvc2017_64\include\QtANGLE -IE:\QT\5.12.0\msvc2017_64\include\QtCore -Irelease -I. -I\include -IE:\QT\5.12.0\msvc2017_64\mkspecs\win32-msvc 
 LINKER        = link
-LFLAGS        = /NOLOGO /DYNAMICBASE /NXCOMPAT /INCREMENTAL:NO /SUBSYSTEM:WINDOWS /MANIFESTUAC:level='requireAdministrator' "/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'"
+LFLAGS        = /NOLOGO /DYNAMICBASE /NXCOMPAT /INCREMENTAL:NO /SUBSYSTEM:WINDOWS "/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'"
 LIBS          = /LIBPATH:E:\QT\5.12.0\msvc2017_64\lib E:\QT\5.12.0\msvc2017_64\lib\Qt5Widgets.lib E:\QT\5.12.0\msvc2017_64\lib\Qt5Gui.lib E:\QT\5.12.0\msvc2017_64\lib\Qt5Core.lib  E:\QT\5.12.0\msvc2017_64\lib\qtmain.lib /LIBPATH:C:\openssl\lib /LIBPATH:C:\Utils\my_sql\mysql-5.6.11-winx64\lib /LIBPATH:C:\Utils\postgresql\pgsql\lib shell32.lib /LIBPATH:E:\QT\5.12.0\msvc2017_64\lib E:\QT\5.12.0\msvc2017_64\lib\Qt5Core.lib 
 QMAKE         = E:\QT\5.12.0\msvc2017_64\bin\qmake.exe
 IDC           = idc
@@ -1037,39 +1037,15 @@ release\loginScreen.obj: ..\..\DESM\loginScreen.cpp ..\..\DESM\loginScreen.h \
 		..\..\DESM\editProfile.h \
 		..\..\DESM\createProfile.h \
 		ui_loginScreen.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtCore\QVariant \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\QApplication \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qapplication.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtCore\qcoreapplication.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtCore\qeventloop.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtGui\qguiapplication.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtGui\qinputmethod.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\QCheckBox \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qcheckbox.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\QLabel \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qlabel.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qframe.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\QLineEdit \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qlineedit.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtGui\qtextcursor.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtGui\qtextformat.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtGui\qpen.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtGui\qtextoption.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\QPushButton \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\QStatusBar \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qstatusbar.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\QToolBar \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qtoolbar.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qaction.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qactiongroup.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\QWidget \
 		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\QTextEdit \
 		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qtextedit.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qframe.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtGui\qtextdocument.h \
+		E:\QT\5.12.0\msvc2017_64\include\QtGui\qtextoption.h \
+		E:\QT\5.12.0\msvc2017_64\include\QtGui\qtextcursor.h \
+		E:\QT\5.12.0\msvc2017_64\include\QtGui\qtextformat.h \
+		E:\QT\5.12.0\msvc2017_64\include\QtGui\qpen.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtGui\QDesktopServices \
 		E:\QT\5.12.0\msvc2017_64\include\QtGui\qdesktopservices.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtCore\qstandardpaths.h \
@@ -1190,44 +1166,11 @@ release\mainscreen.obj: ..\..\DESM\mainscreen.cpp ..\..\DESM\mainscreen.h \
 		..\..\DESM\editProfile.h \
 		..\..\DESM\createProfile.h \
 		ui_mainscreen.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtCore\QVariant \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\QApplication \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qapplication.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtCore\qcoreapplication.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtCore\qeventloop.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtGui\qguiapplication.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtGui\qinputmethod.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\QComboBox \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qcombobox.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qabstractitemdelegate.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qstyleoption.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qabstractspinbox.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtGui\qvalidator.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtCore\qregularexpression.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtGui\qicon.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qslider.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qabstractslider.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qstyle.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qtabbar.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qtabwidget.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qrubberband.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qframe.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtCore\qabstractitemmodel.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\QHBoxLayout \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qlayout.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\QLabel \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qlabel.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\QPushButton \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\QWidget \
 		..\..\DESM\loginScreen.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\QMainWindow \
 		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qmainwindow.h \
+		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qtabwidget.h \
+		E:\QT\5.12.0\msvc2017_64\include\QtGui\qicon.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\QMessageBox \
 		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qmessagebox.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtCore\QDir \
@@ -1341,45 +1284,6 @@ release\loadProfile.obj: ..\..\DESM\loadProfile.cpp ..\..\DESM\loadProfile.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtGui\qtouchdevice.h \
 		..\..\DESM\editProfile.h \
 		ui_loadProfile.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtCore\QVariant \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\QApplication \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qapplication.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtCore\qcoreapplication.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtCore\qeventloop.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtGui\qguiapplication.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtGui\qinputmethod.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\QHBoxLayout \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qlayout.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\QLabel \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qlabel.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qframe.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\QListWidget \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qlistwidget.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qlistview.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qabstractitemview.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtCore\qabstractitemmodel.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtCore\qitemselectionmodel.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qabstractitemdelegate.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qstyleoption.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qabstractspinbox.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtGui\qvalidator.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtCore\qregularexpression.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtGui\qicon.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qslider.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qabstractslider.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qstyle.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qtabbar.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qtabwidget.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qrubberband.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\QPushButton \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\QWidget \
 		E:\QT\5.12.0\msvc2017_64\include\QtCore\QFile \
 		E:\QT\5.12.0\msvc2017_64\include\QtCore\QTextStream \
 		E:\QT\5.12.0\msvc2017_64\include\QtGui\QDesktopServices \
@@ -1397,6 +1301,8 @@ release\loadProfile.obj: ..\..\DESM\loadProfile.cpp ..\..\DESM\loadProfile.h \
 		..\..\DESM\loginScreen.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\QMainWindow \
 		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qmainwindow.h \
+		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qtabwidget.h \
+		E:\QT\5.12.0\msvc2017_64\include\QtGui\qicon.h \
 		..\..\DESM\mainscreen.h \
 		..\..\DESM\createProfile.h
 
@@ -1506,54 +1412,11 @@ release\createProfile.obj: ..\..\DESM\createProfile.cpp ..\..\DESM\createProfile
 		E:\QT\5.12.0\msvc2017_64\include\QtGui\qvector2d.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtGui\qtouchdevice.h \
 		ui_createProfile.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtCore\QVariant \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\QApplication \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qapplication.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtCore\qcoreapplication.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtCore\qeventloop.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtGui\qguiapplication.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtGui\qinputmethod.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\QHBoxLayout \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qlayout.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\QLabel \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qlabel.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qframe.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\QLineEdit \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qlineedit.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtGui\qtextcursor.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtGui\qtextformat.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtGui\qpen.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtGui\qtextoption.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\QListWidget \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qlistwidget.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qlistview.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qabstractitemview.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtCore\qabstractitemmodel.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtCore\qitemselectionmodel.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qabstractitemdelegate.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qstyleoption.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qabstractspinbox.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtGui\qvalidator.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtCore\qregularexpression.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtGui\qicon.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qslider.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qabstractslider.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qstyle.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qtabbar.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qtabwidget.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qrubberband.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\QPushButton \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\QWidget \
 		..\..\DESM\loginScreen.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\QMainWindow \
 		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qmainwindow.h \
+		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qtabwidget.h \
+		E:\QT\5.12.0\msvc2017_64\include\QtGui\qicon.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\QMessageBox \
 		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qmessagebox.h \
 		..\..\DESM\mainscreen.h \
@@ -1573,6 +1436,8 @@ release\createProfile.obj: ..\..\DESM\createProfile.cpp ..\..\DESM\createProfile
 		E:\QT\5.12.0\msvc2017_64\include\QtCore\QtCoreDepends \
 		E:\QT\5.12.0\msvc2017_64\include\QtCore\qabstractanimation.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtCore\qabstracteventdispatcher.h \
+		E:\QT\5.12.0\msvc2017_64\include\QtCore\qeventloop.h \
+		E:\QT\5.12.0\msvc2017_64\include\QtCore\qabstractitemmodel.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtCore\qabstractnativeeventfilter.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtCore\qabstractproxymodel.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtCore\qabstractstate.h \
@@ -1589,6 +1454,7 @@ release\createProfile.obj: ..\..\DESM\createProfile.cpp ..\..\DESM\createProfile
 		E:\QT\5.12.0\msvc2017_64\include\QtCore\qcborvalue.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtCore\qdatetime.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtCore\qcborcommon.h \
+		E:\QT\5.12.0\msvc2017_64\include\QtCore\qregularexpression.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtCore\quuid.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtCore\qcbormap.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtCore\qcborstream.h \
@@ -1596,6 +1462,7 @@ release\createProfile.obj: ..\..\DESM\createProfile.cpp ..\..\DESM\createProfile
 		E:\QT\5.12.0\msvc2017_64\include\QtCore\qcollator.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtCore\qcommandlineoption.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtCore\qcommandlineparser.h \
+		E:\QT\5.12.0\msvc2017_64\include\QtCore\qcoreapplication.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtCore\qcryptographichash.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtCore\qdeadlinetimer.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtCore\qelapsedtimer.h \
@@ -1619,6 +1486,7 @@ release\createProfile.obj: ..\..\DESM\createProfile.cpp ..\..\DESM\createProfile
 		E:\QT\5.12.0\msvc2017_64\include\QtCore\qhistorystate.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtCore\qidentityproxymodel.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtCore\qisenum.h \
+		E:\QT\5.12.0\msvc2017_64\include\QtCore\qitemselectionmodel.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtCore\qjsonarray.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtCore\qjsonvalue.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtCore\qjsondocument.h \
@@ -1686,9 +1554,13 @@ release\createProfile.obj: ..\..\DESM\createProfile.cpp ..\..\DESM\createProfile
 		E:\QT\5.12.0\msvc2017_64\include\QtGui\QtGuiDepends \
 		E:\QT\5.12.0\msvc2017_64\include\QtGui\qabstracttextdocumentlayout.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtGui\qtextlayout.h \
+		E:\QT\5.12.0\msvc2017_64\include\QtGui\qtextformat.h \
+		E:\QT\5.12.0\msvc2017_64\include\QtGui\qpen.h \
+		E:\QT\5.12.0\msvc2017_64\include\QtGui\qtextoption.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtGui\qglyphrun.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtGui\qrawfont.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtGui\qfontdatabase.h \
+		E:\QT\5.12.0\msvc2017_64\include\QtGui\qtextcursor.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtGui\qtextdocument.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtGui\qaccessible.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtGui\qaccessiblebridge.h \
@@ -1707,6 +1579,8 @@ release\createProfile.obj: ..\..\DESM\createProfile.cpp ..\..\DESM\createProfile
 		E:\QT\5.12.0\msvc2017_64\include\QtGui\qgenericmatrix.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtGui\qgenericplugin.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtGui\qgenericpluginfactory.h \
+		E:\QT\5.12.0\msvc2017_64\include\QtGui\qguiapplication.h \
+		E:\QT\5.12.0\msvc2017_64\include\QtGui\qinputmethod.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtGui\qiconengine.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtGui\qiconengineplugin.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtGui\qimageiohandler.h \
@@ -1778,6 +1652,7 @@ release\createProfile.obj: ..\..\DESM\createProfile.cpp ..\..\DESM\createProfile
 		E:\QT\5.12.0\msvc2017_64\include\QtGui\qtextdocumentwriter.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtGui\qtextlist.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtGui\qtexttable.h \
+		E:\QT\5.12.0\msvc2017_64\include\QtGui\qvalidator.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtGui\qtguiversion.h
 
 release\editProfile.obj: ..\..\DESM\editProfile.cpp ..\..\DESM\editProfile.h \
@@ -1886,48 +1761,11 @@ release\editProfile.obj: ..\..\DESM\editProfile.cpp ..\..\DESM\editProfile.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtGui\qvector2d.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtGui\qtouchdevice.h \
 		ui_editProfile.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtCore\QVariant \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\QApplication \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qapplication.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtCore\qcoreapplication.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtCore\qeventloop.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtGui\qguiapplication.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtGui\qinputmethod.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\QHBoxLayout \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qboxlayout.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qlayout.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qlayoutitem.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qgridlayout.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\QLabel \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qlabel.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qframe.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\QListWidget \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qlistwidget.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qlistview.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qabstractitemview.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtCore\qabstractitemmodel.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtCore\qitemselectionmodel.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qabstractitemdelegate.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qstyleoption.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qabstractspinbox.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtGui\qvalidator.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtCore\qregularexpression.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtGui\qicon.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qslider.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qabstractslider.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qstyle.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qtabbar.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qtabwidget.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qrubberband.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\QPushButton \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qpushbutton.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qabstractbutton.h \
-		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\QWidget \
 		..\..\DESM\loginScreen.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\QMainWindow \
 		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qmainwindow.h \
+		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qtabwidget.h \
+		E:\QT\5.12.0\msvc2017_64\include\QtGui\qicon.h \
 		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\QMessageBox \
 		E:\QT\5.12.0\msvc2017_64\include\QtWidgets\qmessagebox.h \
 		..\..\DESM\mainscreen.h \
