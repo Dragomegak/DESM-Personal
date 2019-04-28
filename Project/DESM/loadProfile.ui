@@ -104,9 +104,49 @@
      <x>70</x>
      <y>60</y>
      <width>256</width>
-     <height>192</height>
+     <height>161</height>
     </rect>
    </property>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>230</y>
+     <width>340</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_4">
+    <item>
+     <widget class="QPushButton" name="desktopOneButton">
+      <property name="text">
+       <string>Desktop 1</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="desktopTwoButton">
+      <property name="text">
+       <string>Desktop 2</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="desktopThreeButton">
+      <property name="text">
+       <string>Desktop 3</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="desktopFourButton">
+      <property name="text">
+       <string>Desktop 4</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>

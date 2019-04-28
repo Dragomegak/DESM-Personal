@@ -25,6 +25,14 @@ private slots:
     void on_loadProfile_clicked();
 
 
+    void on_desktopOneButton_clicked();
+
+    void on_desktopTwoButton_clicked();
+
+    void on_desktopThreeButton_clicked();
+
+    void on_desktopFourButton_clicked();
+
 private:
     Ui::LoadProfile *ui;
     EditProfile *editProfile;

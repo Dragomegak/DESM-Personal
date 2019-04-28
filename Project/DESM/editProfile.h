@@ -18,7 +18,6 @@ public:
 private slots:
     void on_backButton_clicked();
 
-    void on_addProgram_clicked();
 
     void on_refresh_clicked();
 

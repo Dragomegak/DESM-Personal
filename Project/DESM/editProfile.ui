@@ -26,14 +26,7 @@
     <item>
      <widget class="QLabel" name="currentProfileLabel">
       <property name="text">
-       <string>Current Profile:</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="showCurrentProfileLabel">
-      <property name="text">
-       <string>None Selected</string>
+       <string>Profiles</string>
       </property>
      </widget>
     </item>
@@ -75,13 +68,6 @@
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout_3">
-    <item>
-     <widget class="QPushButton" name="addProgram">
-      <property name="text">
-       <string>Add Program</string>
-      </property>
-     </widget>
-    </item>
     <item>
      <widget class="QPushButton" name="deleteFile">
       <property name="text">

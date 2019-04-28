@@ -37,6 +37,12 @@ public:
     QPushButton *editProfileButton;
     QPushButton *backButton;
     QListWidget *listWidget;
+    QWidget *widget;
+    QHBoxLayout *horizontalLayout_4;
+    QPushButton *desktopOneButton;
+    QPushButton *desktopTwoButton;
+    QPushButton *desktopThreeButton;
+    QPushButton *desktopFourButton;
 
     void setupUi(QDialog *LoadProfile)
     {
@@ -98,7 +104,33 @@ public:
 
         listWidget = new QListWidget(LoadProfile);
         listWidget->setObjectName(QString::fromUtf8("listWidget"));
-        listWidget->setGeometry(QRect(70, 60, 256, 192));
+        listWidget->setGeometry(QRect(70, 60, 256, 161));
+        widget = new QWidget(LoadProfile);
+        widget->setObjectName(QString::fromUtf8("widget"));
+        widget->setGeometry(QRect(30, 230, 340, 24));
+        horizontalLayout_4 = new QHBoxLayout(widget);
+        horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
+        horizontalLayout_4->setContentsMargins(0, 0, 0, 0);
+        desktopOneButton = new QPushButton(widget);
+        desktopOneButton->setObjectName(QString::fromUtf8("desktopOneButton"));
+
+        horizontalLayout_4->addWidget(desktopOneButton);
+
+        desktopTwoButton = new QPushButton(widget);
+        desktopTwoButton->setObjectName(QString::fromUtf8("desktopTwoButton"));
+
+        horizontalLayout_4->addWidget(desktopTwoButton);
+
+        desktopThreeButton = new QPushButton(widget);
+        desktopThreeButton->setObjectName(QString::fromUtf8("desktopThreeButton"));
+
+        horizontalLayout_4->addWidget(desktopThreeButton);
+
+        desktopFourButton = new QPushButton(widget);
+        desktopFourButton->setObjectName(QString::fromUtf8("desktopFourButton"));
+
+        horizontalLayout_4->addWidget(desktopFourButton);
+
 
         retranslateUi(LoadProfile);
 
@@ -115,6 +147,10 @@ public:
         loadProfile->setText(QApplication::translate("LoadProfile", "Load Profile", nullptr));
         editProfileButton->setText(QApplication::translate("LoadProfile", "Edit Profile", nullptr));
         backButton->setText(QApplication::translate("LoadProfile", "Back", nullptr));
+        desktopOneButton->setText(QApplication::translate("LoadProfile", "Desktop 1", nullptr));
+        desktopTwoButton->setText(QApplication::translate("LoadProfile", "Desktop 2", nullptr));
+        desktopThreeButton->setText(QApplication::translate("LoadProfile", "Desktop 3", nullptr));
+        desktopFourButton->setText(QApplication::translate("LoadProfile", "Desktop 4", nullptr));
     } // retranslateUi
 
 };

@@ -26,14 +26,12 @@ public:
     QWidget *layoutWidget_2;
     QHBoxLayout *horizontalLayout_2;
     QLabel *currentProfileLabel;
-    QLabel *showCurrentProfileLabel;
     QWidget *layoutWidget;
     QHBoxLayout *horizontalLayout;
     QLabel *currentUserLabel;
     QLabel *showUsernameLabel;
     QWidget *layoutWidget_3;
     QHBoxLayout *horizontalLayout_3;
-    QPushButton *addProgram;
     QPushButton *deleteFile;
     QPushButton *backButton;
     QListWidget *listWidget;
@@ -54,11 +52,6 @@ public:
         currentProfileLabel->setObjectName(QString::fromUtf8("currentProfileLabel"));
 
         horizontalLayout_2->addWidget(currentProfileLabel);
-
-        showCurrentProfileLabel = new QLabel(layoutWidget_2);
-        showCurrentProfileLabel->setObjectName(QString::fromUtf8("showCurrentProfileLabel"));
-
-        horizontalLayout_2->addWidget(showCurrentProfileLabel);
 
         layoutWidget = new QWidget(EditProfile);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
@@ -82,11 +75,6 @@ public:
         horizontalLayout_3 = new QHBoxLayout(layoutWidget_3);
         horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
         horizontalLayout_3->setContentsMargins(0, 0, 0, 0);
-        addProgram = new QPushButton(layoutWidget_3);
-        addProgram->setObjectName(QString::fromUtf8("addProgram"));
-
-        horizontalLayout_3->addWidget(addProgram);
-
         deleteFile = new QPushButton(layoutWidget_3);
         deleteFile->setObjectName(QString::fromUtf8("deleteFile"));
 
@@ -112,11 +100,9 @@ public:
     void retranslateUi(QDialog *EditProfile)
     {
         EditProfile->setWindowTitle(QApplication::translate("EditProfile", "Dialog", nullptr));
-        currentProfileLabel->setText(QApplication::translate("EditProfile", "Current Profile:", nullptr));
-        showCurrentProfileLabel->setText(QApplication::translate("EditProfile", "None Selected", nullptr));
+        currentProfileLabel->setText(QApplication::translate("EditProfile", "Profiles", nullptr));
         currentUserLabel->setText(QApplication::translate("EditProfile", "Current User:", nullptr));
         showUsernameLabel->setText(QApplication::translate("EditProfile", "username", nullptr));
-        addProgram->setText(QApplication::translate("EditProfile", "Add Program", nullptr));
         deleteFile->setText(QApplication::translate("EditProfile", "Delete File", nullptr));
         backButton->setText(QApplication::translate("EditProfile", "Back", nullptr));
         refresh->setText(QApplication::translate("EditProfile", "Refresh", nullptr));
