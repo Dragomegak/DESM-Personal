@@ -48,8 +48,10 @@ void CreateProfile::on_addProgram_clicked()
                 "C:\\Program Files (x86)",
                 "All Files (*.*);; Exe Files (*.exe)"
                 );
-    QString profilename = ui->lineEdit->text() + ".txt";
-    QString profile = profilename;
+    QString profilename = filename + ".txt";
+    QString profile = filename;
+    //QString profilename = ui->lineEdit->text() + ".txt";
+    //QString profile = profilename;
     qDebug() << QDir::currentPath();
         if (!QDir::setCurrent(QCoreApplication::applicationDirPath()))
             qDebug() << "Could not change the current working directory";
